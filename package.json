@@ -1,0 +1,38 @@
+{
+  "name": "typescript-plugin",
+  "version": "1.0.0",
+  "description": "Typescript plugin boilerplate",
+  "icon": "https://raw.githubusercontent.com/tailwindlabs/heroicons/88e98b0c2b458553fbadccddc2d2f878edc0387b/src/20/solid/command-line.svg",
+  "main": "dist/index.js",
+  "module": "dist/module.js",
+  "author": "Jan",
+  "license": "MIT",
+  "activationPoints": [
+    "init"
+  ],
+  "scripts": {
+    "build": "tsc -b . && webpack --config webpack.config.js",
+    "bundle": "npm pack"
+  },
+  "exports": {
+    ".": "./dist/index.js",
+    "./main": "./dist/module.js"
+  },
+  "devDependencies": {
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "@janhq/core": "^0.1.1",
+    "ts-loader": "^9.5.0"
+  },
+  "bundledDependencies": [],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "dist/*",
+    "package.json",
+    "README.md"
+  ]
+}
